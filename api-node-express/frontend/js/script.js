@@ -1,7 +1,7 @@
 // Función para cargar la lista de departamentos
 const cargarDepartamentos = async () => {
   try {
-    const response = await fetch('http://localhost:8085/api/departments');
+    const response = await fetch('http://localhost:8080/api/departments');
     const departamentos = await response.json();
     
     // Obtener el elemento select del formulario de empleado
@@ -28,13 +28,13 @@ cargarDepartamentos();
 // Función para cargar la lista de empleados
 const loadEmployees = async () => {
   try {
-    const response = await fetch('http://localhost:8085/api/employees');
+    const response = await fetch('http://localhost:8080/api/employees');
     const employees = await response.json();
     employeesList.innerHTML = '';
     // Recorrer cada empleado
     for (const employee of employees) {
       // Hacer una solicitud para obtener el nombre del departamento
-      const departmentResponse = await fetch(`http://localhost:8085/api/departments/${employee.id_departamento}`);
+      const departmentResponse = await fetch(`http://localhost:8080/api/departments/${employee.id_departamento}`);
       const department = await departmentResponse.json();
       // Crear un elemento para mostrar la información del empleado
       const employeeItem = document.createElement('div');
@@ -62,7 +62,7 @@ employeeForm.addEventListener('submit', async (event) => {
   const nombre = document.getElementById('nombre').value;
   const sueldo = document.getElementById('sueldo').value;
   try {
-    await fetch('http://localhost:8085/api/employees', {
+    await fetch('http://localhost:8080/api/employees', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -128,7 +128,7 @@ function updateEmployeeForm(id_empleado, nombre, id_departamento, sueldo) {
 // Función para actualizar los datos de un empleado
 const updateEmployee = async (id_empleado, id_departamento, nombre, sueldo) => {
   try {
-    await fetch(`http://localhost:8085/api/employees/${id_empleado}`, {
+    await fetch(`http://localhost:8080/api/employees/${id_empleado}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -144,7 +144,7 @@ const updateEmployee = async (id_empleado, id_departamento, nombre, sueldo) => {
 // Función para eliminar un empleado
 const deleteEmployee = async (id_empleado) => {
   try {
-    await fetch(`http://localhost:8085/api/employees/${id_empleado}`, {
+    await fetch(`http://localhost:8080/api/employees/${id_empleado}`, {
       method: 'DELETE'
     });
     loadEmployees();
@@ -162,7 +162,7 @@ const deleteEmployee = async (id_empleado) => {
  // Función para cargar la lista de departamentos
  const loadDepartments = async () => {
   try {
-    const response = await fetch('http://localhost:8085/api/departments');
+    const response = await fetch('http://localhost:8080/api/departments');
     const departments = await response.json();
     departmentsList.innerHTML = '';
     departments.forEach(department => {
@@ -187,7 +187,7 @@ departmentForm.addEventListener('submit', async (event) => {
   event.preventDefault();
   const nombre = document.getElementById('name-department').value;
   try {
-    const response = await fetch('http://localhost:8085/api/departments', {
+    const response = await fetch('http://localhost:8080/api/departments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -245,7 +245,7 @@ function updateDepartmentForm(id_departamento, nombre) {
 // Función para actualizar los datos de un departamento
 const updateDepartment = async ( id_departamento, nombre) => {
   try {
-    await fetch(`http://localhost:8085/api/departments/${id_departamento}`, {
+    await fetch(`http://localhost:8080/api/departments/${id_departamento}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -261,7 +261,7 @@ const updateDepartment = async ( id_departamento, nombre) => {
 // Función para eliminar un empleado
 const deleteDepartment = async (id_departamento) => {
   try {
-    await fetch(`http://localhost:8085/api/departments/${id_departamento}`, {
+    await fetch(`http://localhost:8080/api/departments/${id_departamento}`, {
       method: 'DELETE'
     });
     loadDepartments();

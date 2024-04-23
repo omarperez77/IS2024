@@ -10,26 +10,6 @@
 <body>
     <div class="form-container">
         <div>
-            <h1>App Empleados</h1>
-            <form id="employeeForm">
-                <div class="form-group">
-                    <label for="departamento">Departamento:</label>    
-                    <select name="departamento" id="departamento" required></select>
-                </div>
-                <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required pattern="[A-Za-z\s]+">
-                <!-- <small>Ingresa solo letras y espacios.</small>-->
-                </div>
-                <div class="form-group">
-                    <label for="sueldo">Sueldo:</label>
-                    <input type="text" name="sueldo" id="sueldo" placeholder="Sueldo" required>
-                    <small>Ingresa solo números.</small>
-                </div>
-                <button type="submit" class="btn-submit">Crear empleado</button>
-            </form>
-        </div>
-        <div>
             <h1>App Departamentos</h1>
             <form id="departmentForm">
                 <div class="form-group">
@@ -40,7 +20,6 @@
             </form>
         </div>
     </div>
-    <div id="employeesList" class="info"></div>
     <div id="departmentsList" class="info"></div>
     <script>
         document.getElementById('sueldo').addEventListener('input', function(event) {
