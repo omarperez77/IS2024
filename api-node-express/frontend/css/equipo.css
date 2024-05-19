@@ -39,3 +39,18 @@
 .container li:hover {
     background-color: #e0e0e0; /* Cambia el color de fondo al pasar el ratón */
 }
+<<<<<<< HEAD
+=======
+
+.background-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-image: url('contacto.jpg');
+    background-size: cover; 
+    background-position: center; 
+}
+
+
+>>>>>>> 20c2c96e3e3b2e7e2df7841ae95ab3f6edac7daa
