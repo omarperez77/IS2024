@@ -26,15 +26,16 @@ const cargarDepartamentos = async () => {
 cargarDepartamentos();
 
 // Función para cargar la lista de empleados
+// Función para cargar la lista de empleados
 const loadEmployees = async () => {
   try {
-    const response = await fetch('http://localhost:8080/api/employees');
+    const response = await fetch('http://localhost:8080/api/employees/');
     const employees = await response.json();
     employeesList.innerHTML = '';
     // Recorrer cada empleado
     for (const employee of employees) {
       // Hacer una solicitud para obtener el nombre del departamento
-      const departmentResponse = await fetch(`http://localhost:8080/api/departments/${employee.id_departamento}`);
+      const departmentResponse = await fetch(`http://localhost:8080/api/departments/${employee.departamento}`);
       const department = await departmentResponse.json();
       // Crear un elemento para mostrar la información del empleado
       const employeeItem = document.createElement('div');
@@ -53,6 +54,7 @@ const loadEmployees = async () => {
     console.error('Error al cargar empleados:', error);
   }
 };
+
 
 // Función para enviar el formulario y crear un nuevo empleado
 employeeForm.addEventListener('submit', async (event) => {
