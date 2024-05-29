@@ -1,110 +1,89 @@
- 
- #employeesList, #departmentsList {
-    width: 80%; /* Ancho del contenedor */
-    margin: 20px auto; /* Margen superior e inferior automático, centrando horizontalmente */
-    padding: 20px;
-    border: 1px solid #ccc; /* Borde del contenedor */
-    border-radius: 5px; /* Bordes redondeados */
-    background-color: #f9f9f9; /* Color de fondo */
- }
-
- h1 {
-    font: roboto;
-    font-size: 24px;
-    color: black;
-    text-align: center;
- }
-
-
 body {
-    background-color: lightgray;
-    padding: 30px;
- }
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
 
- /* Estilos para el contenedor del formulario */
+header {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+  overflow: hidden;
+}
+
+h1, h2 {
+  color: #333;
+}
+
 .form-container {
-    width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    display: flex; /* Establece el contenedor como flexbox */
-    justify-content: space-between; /* Distribuye los elementos alrededor */
-}
-
-.form-container > div {
-  width: 48%; /* Ancho de cada formulario */
+  background-color: #ffffff;
   padding: 20px;
-  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+input[type="text"],
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
   border-radius: 5px;
-  background-color: #f9f9f9;
+  border: 1px solid #ccc;
 }
 
-/* Estilos para los campos de entrada */
-.form-group {
-    margin-bottom: 20px;
+button {
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+button:hover {
+  background-color: #218838;
 }
 
-.form-group input[type="text"],
-.form-group input[type="number"],
-.form-group textarea, .form-group select {
-    width: 100%;
+@media (max-width: 992px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    padding: 15px;
+  }
+
+  input[type="text"],
+  select,
+  button {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-container {
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box; /* Garantiza que el padding no afecte el ancho total */
+  }
+
+  h1, h2 {
+    font-size: 1.5em;
+  }
 }
 
-/* Estilos para el botón de enviar */
-.btn-submit {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 3px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
+.info {
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
 }
-
-.btn-submit:hover {
-    background-color: #0056b3;
-}
-
-/* Estilos para los divs generados */
-.employee-item , .department-item {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .employee-item p , .department-item  p{
-    margin: 5px 0;
-  }
-  
-  .employee-item button , .department-item button{
-    background-color: #007bff;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-    margin-right: 5px;
-  }
-  
-  .employee-item button:hover , .department-item button:hover {
-    background-color: #0056b3;
-  }
-
-  .department-item button:hover , .department-item button:hover {
-    background-color: #0056b3;
-  }
-
