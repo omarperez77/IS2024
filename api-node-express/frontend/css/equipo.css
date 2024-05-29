@@ -1,0 +1,53 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.container {
+    margin-top: 70px; 
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5rem; /* Tamaño grande para el título */
+    margin-bottom: 30px; /* Espaciado inferior */
+}
+
+.container ul {
+    list-style: none; /* Elimina los puntos de lista */
+    padding: 0;
+}
+
+.container li {
+    margin-bottom: 15px; /* Espaciado entre elementos */
+    padding: 15px;
+    background-color: #f2f2f2; /* Color de fondo */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem; /* Tamaño de fuente */
+    color: #333; /* Color de texto */
+}
+
+.container li:hover {
+    background-color: #e0e0e0; /* Cambia el color de fondo al pasar el ratón */
+}
+
+.background-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-image: url('contacto.jpg');
+    background-size: cover; 
+    background-position: center; 
+}
+
+
